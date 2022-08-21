@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aspire Connection</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="shortcut icon" href="/public/favicon-16x16.png" type="image/x-icon">
+  </head>
+  <body>
+    <section class="chat__section">
+      <div class="logo">
+        <img height="40" src="/logo.png" alt="" />
+        <h1>Aspire Connection</h1>
+        <p id="dev">
+          <a href="https://www.instagram.com/hafeez143h/" target="_blank"
+            ><b>@Hafeez<img
+              src="https://png.pngtree.com/png-clipart/20190517/original/pngtree-instagram-icon-png-image_3584853.png"
+              alt=""
+              height="14px" width="14px" 
+          /></b>
+          </a>
+        </p>
+      </div>
+      <div id="message__area">
+        <h6>Welcome To Aspire Connection</h6>
+
+        <!-- <div class="user-join">
+              <p><b>Hafeez</b> joined the chat</p>
+          </div> -->
+      </div>
+      <div>
+        <input
+          id="type_message"
+          type="text"
+          placeholder="Type a Message"
+          required
+        />
+        
+      </div>
+      <footer></footer>
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>

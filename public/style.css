@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f8f8f8;
+  font-family: "Roboto", sans-serif;
+}
+
+.chat__section {
+  width: 800px;
+  max-width: 90%;
+  background: #fff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  padding: 20px;
+  display: flex;
+  background: #f1f1f1;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #444;
+}
+
+#message__area {
+  background: url(/bg.webp);
+  height: 500px; 
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  /* padding-top: 40px; */
+}
+
+.user-join {
+  font-size: 0.9rem;
+  padding: 7px 20px;
+  border-radius: 50px;
+  width: max-content;
+  margin: 0 auto;
+  background-color: #e9eafd;
+  color: #787986;
+  margin-bottom: 5px;
+}
+
+h6{
+  font-size: 1.1rem;
+  padding: 7px 20px;
+  border-radius: 40px;
+  width: max-content;
+  margin: 0 auto;
+  background-color: rgba(29, 28, 28, 0.685);
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+#dev{
+  margin-left: auto;
+  max-width: fit-content;
+  font-size: 10px;
+}
+
+a{
+  text-decoration: none;
+  /* color: #fff; */
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 16px;
+  margin-top: 4px;
+  border-radius: 2px;
+  font-size: 16px;
+  background: #e7e7e7;
+}
+
+.message {
+  padding: 10px 20px;
+  border-radius: 0px 20px 20px 0;
+  /* margin-top: 15px; */
+  margin-bottom: 40px;
+
+  max-width: max-content;
+  position: relative;
+}
+
+.left {
+  margin-top: 10px;
+  border-radius: 0px 20px 20px 0px;
+  color: #fff;
+  background-color: #0a1014;
+}
+
+.right {
+  margin-top: 20px;
+  border-radius: 20px 0px 0px 20px;
+  background-color: #00a884;
+  color: #E9EDEF;
+  margin-left: auto;
+}
+
+.message h4 {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  right: 0px;
+  color: rgb(168, 235, 255);
+  font-size: 16px;
+  /* margin-bottom: -50px; */
+}
+
+@media only screen and (max-width: 400px) {
+  a{
+    display: block;
+  }
+}
