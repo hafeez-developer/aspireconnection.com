@@ -28,18 +28,24 @@ io.on('connection',(socket)=>{
         users[socket.id]=username;
         console.log(username, 'joined the chat ',socket.id);
         socket.broadcast.emit('user-connected',username)
+        io.emit("user-list",users);
     })
 
     socket.on('disconnect',()=>{
-        socket.broadcast.emit('user-disconnected',username=users[socket.id]);
+        socket.broadcast.emit('user-disconnected',user=users[socket.id]);
         delete users[socket.id];
-        console.log(username,' left the chat ',socket.id);
+        console.log(user,' left the chat ',socket.id);
+        io.emit("user-list",users);
+    });
+
+    socket.on('message',(data)=>{
+        socket.broadcast.emit('message',{user: data.user,msg: data.msg})
     })
 
     console.log('User Connected...')
-    socket.on('message', (msg)=>{
-        socket.broadcast.emit('message',msg)
-    })
+    // socket.on('message', (msg)=>{
+    //     socket.broadcast.emit('message',msg)
+    // })
 })
 
 

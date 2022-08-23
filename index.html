@@ -5,45 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aspire Connection</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" />
     <link rel="stylesheet" type="text/css" href="/style.css" />
-    <link rel="shortcut icon" href="/favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon-16x16.png" type="image/x-icon" />
   </head>
   <body>
-    <section class="chat__section">
+    <main>
+      <header>
+        <div class="title">
+          <img height="40" src="/logo.png" alt="" />
+          <h1>Aspire Connection</h1>
+        </div>
+        <button type="button" name="button" id="menu-btn">
+          <img src="/menu.png" alt="" height="35px" width="35px" />
+        </button>
+      </header>
+      <div class="container">
+        <div class="users-window">
+          <div class="users-head">
+            <h3>Active Users</h3>
+            <h4 class="users-count">0</h4>
+          </div>
+          <div class="users-list">
+            <p></p>
+            <p></p>
+            <p></p>
+            <br />
+            <p>Developed By Hafeez || Version 1.2.0</p>
+          </div>
+        </div>
+        <div class="chat-window">
+          <div class="chats">
+            <h6>Welcome To Aspire Connection</h6>
+
+            <!-- <div class="user-join">
+              <p><b>Hafeez</b> joined the chat</p>
+            </div> -->
+            <!-- <div class="message incoming">
+              <h5>Hafeez</h5>
+              <p>Hello Guys</p>
+            </div>
+            <div class="message outgoing">
+              <h5>Nabeel</h5>
+              <p>Hello Guys</p>
+            </div> -->
+          </div>
+          <div class="user_input">
+            <input
+              id="user-msg"
+              type="text"
+              placeholder="Type a Message"
+              required
+            />
+            <button id="msg-send" type="button">
+              <img src="/send-logo-icon-png-svg.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <section class="chat__section">
       <div class="logo">
         <img height="40" src="/logo.png" alt="" />
         <h1>Aspire Connection</h1>
-        <p id="dev">
-          <a href="https://www.instagram.com/hafeez143h/" target="_blank"
-            ><b>@Hafeez<img
-              src="https://png.pngtree.com/png-clipart/20190517/original/pngtree-instagram-icon-png-image_3584853.png"
-              alt=""
-              height="14px" width="14px" 
-          /></b>
-          </a>
-        </p>
+        <div class="toggle-collapse">
+          <img
+            src="/png-clipart-hamburger-button-computer-icons-menu-navigation-menu-angle-rectangle.png"
+            alt=""
+          />
+        </div>
       </div>
-      <div id="message__area">
-        <h6>Welcome To Aspire Connection</h6>
-        <!-- <br> -->
-        <p class="user-join"><b>Hafeez</b> On The Chat</p>
+      <div class="container">
+        <div class="user-window">
+          <div class="users-head">
+            <h3>Active Users</h3>
+            <h4 class="users-count">3</h4>
+          </div>
+          <div class="users-list">
+            <p>Hafeez</p>
+            <p>Nabeel</p>
+            <p>Asad</p>
+          </div>
+        </div>
 
-        <!-- <div class="user-join">
+        <div id="message__area">
+          <h6>Welcome To Aspire Connection</h6>
+          <br>
+          <p class="user-join"><b>Hafeez</b> On The Chat</p>
+          <br />
+
+          <div class="user-join">
               <p><b>Hafeez</b> joined the chat</p>
-          </div> -->
+          </div>
+        </div>
       </div>
-      <div>
+      <div class="user_input">
         <input
           id="type_message"
           type="text"
           placeholder="Type a Message"
           required
         />
-        
+        <button><img src="/send-logo-icon-png-svg.png" alt="" /></button>
       </div>
-      <footer></footer>
-    </section>
+    </section> -->
 
+    <!-- <script>
+      let uwindow = document.querySelector(".users-window");
+      function show_hide() {
+        if (uwindow.style.display == "block") {
+          uwindow.style.display = "none";
+        } else {
+          uwindow.style.display = "block";
+        }
+      }
+    </script> -->
     <script src="/socket.io/socket.io.js"></script>
     <script src="/client.js"></script>
   </body>
