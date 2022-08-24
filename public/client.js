@@ -30,9 +30,9 @@ function userJoinLeft(name, status) {
   div.innerHTML = content;
   chats.appendChild(div);
 
-  setTimeout(() => {
-    div.remove();
-  }, 10000);
+//   setTimeout(() => {
+//     div.remove();
+//   }, 10000);
 }
 
 socket.on("user-disconnected", (user) => {
