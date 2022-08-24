@@ -7,6 +7,7 @@ let users_list = document.querySelector(".users-list");
 let users_count = document.querySelector(".users-count");
 let msg_send = document.querySelector("#msg-send");
 let user_msg = document.querySelector("#user-msg");
+let input = document.querySelector('input');
 
 do {
   verify = confirm("Are You Aspirian?");
@@ -30,7 +31,7 @@ function userJoinLeft(name, status) {
   chats.appendChild(div);
 
   setTimeout(() => {
-      div.remove();
+    div.remove();
   }, 10000);
 }
 
@@ -39,7 +40,7 @@ socket.on("user-disconnected", (user) => {
 });
 
 socket.on("user-list", (users) => {
-  users_list.innerHTML = "";
+  users_list.innerHTML = ``;
   users_arr = Object.values(users);
   for (i = 0; i < users_arr.length; i++) {
     let p = document.createElement("p");
@@ -49,8 +50,8 @@ socket.on("user-list", (users) => {
   users_count.innerHTML = users_arr.length;
 });
 
-// msg_send.addEventListener("keyup", (e) => {
-//   if (e.key === "Enter") {
+// input.addEventListener("keyup", (e) => {
+//   if (e.key == "Enter") {
 //     appendMessage(e.target.value);
 //   }
 // });
@@ -60,11 +61,16 @@ msg_send.addEventListener("click", () => {
     user: username,
     msg: user_msg.value,
   };
+  if ((user_msg.value == "")) {
+    appendMessage();
+    socket.emit("console",data)
+  } 
   if (user_msg != "") {
     appendMessage(data, "outgoing");
     socket.emit("message", data);
     user_msg.value = "";
   }
+
 });
 
 function appendMessage(data, status) {
@@ -118,19 +124,10 @@ function ScrollBottom() {
   chats.scrollTop = chats.scrollHeight;
 }
 
-// $(document).ready(function () {
-//   $nav = $(".logo");
-//   $toggleCollapse = $(".toggle-collapse");
-
-//   /** click event on toggle menu */
-//   $toggleCollapse.onClick(function () {
-//     $logo.toggleClass("collapse");
-//   });
-// });
-// }
-
 let uwindow = document.querySelector(".users-window");
-let toggle = document.querySelector('#menu-btn').addEventListener("click", show_hide)
+let toggle = document
+  .querySelector("#menu-btn")
+  .addEventListener("click", show_hide);
 function show_hide() {
   if (uwindow.style.display == "block") {
     uwindow.style.display = "none";

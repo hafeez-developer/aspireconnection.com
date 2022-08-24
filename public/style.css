@@ -101,6 +101,20 @@ div.container .users-window .users-list p {
   margin-bottom: 15px;
 }
 
+#stat{
+  font-size: 0.9rem;
+}
+
+div.container .users-window .users-list #stat{
+  position: absolute;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+
+}
+
 div.container .chat-window {
   width: 100%;
   border: 10px;
@@ -211,6 +225,9 @@ div.container .chat-window .user_input button img {
     z-index: 11;
     box-shadow: 0 15px 20px -20px black;
     padding-bottom: 0px;
+    display: none;
+  }
+  main div.container .users-window .users-list #stat{
     display: none;
   }
   main div.container .users-window .chat-window .chats .message {
