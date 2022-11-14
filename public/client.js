@@ -1,6 +1,6 @@
 const socket = io();
 
-let verify;
+// let verify;
 let username;
 let chats = document.querySelector(".chats");
 let users_list = document.querySelector(".users-list");
@@ -9,9 +9,9 @@ let msg_send = document.querySelector("#msg-send");
 let user_msg = document.querySelector("#user-msg");
 let input = document.querySelector('input');
 
-do {
-  verify = confirm("Are You Aspirian?");
-} while (!verify);
+// do {
+//   verify = confirm("Are You Aspirian?");
+// } while (!verify);
 
 do {
   username = prompt("Enter Your Name To Join Chat: ");
